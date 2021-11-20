@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<!-- Este es el proyecto del semestre 
+     Autor:Gerardo Torres Jaime
+-->	
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href=" Hoja de estilo.css">
+</head>
+<style>
+.center{
+display:block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+</style>
+<body class=Fondo4>
+    <a name="Inicio">
+        <br />
+        <br />
+        <br />
+        <h1 style="font-family: 'Forte', Times, serif; font-size: 40px; color: #00BD22 ; text-align: right; border-style:groove;text-shadow: 2px 2px black;">Unidad 4.Procesamiento Paralelo</h1>
+       
+        
+        <br><br>
+		<br><br>
+		<br><br>
+        
+        <div class="div-unidades">
+            <h1  style="font-family: 'Forte', Times, serif; font-size: 30px; color:  white; text-align: left; border-style:groove;text-shadow: 3px 3px black;">
+                Indice:
+            </h1>
+            <li>
+                <a href="#4.1" target="_self" style="font-family: 'verdana', Times, serif; font-size: 20px; color: black;"> 4.1 Aspectos básicos de la computación paralela </a>
+            </li><br/>
+            <li>
+                <a href="#4.2" target="_self" style="font-family: 'verdana', Times, serif; font-size: 20px; color: black;"> 4.2 Tipos de compútación paralela </a>
+            </li><br/>
+            <li>
+                <a href="#4.2.1" target="_self" style="font-family: 'verdana', Times, serif; font-size: 20px; color: black;"> 4.2.1 Clasificación</a>
+            </li><br/>
+            <li>
+                <a href="#4.2.2" target="_self" style="font-family: 'verdana', Times, serif; font-size: 20px; color: black;"> 4.2.2 Arquitectura de computadoras secuenciales</a>
+            </li><br/>
+            <li>
+                <a href="#4.2.3" target="_self" style="font-family: 'verdana', Times, serif; font-size: 20px; color: black;"> 4.2.3 Organización de direcciones de memoria</a>
+            </li><br />
+            <li>
+                <a href="#4.3" target="_self" style="font-family: 'verdana', Times, serif; font-size: 20px; color: black;"> 4.3 Sistemas de memoria (compartida)</a>
+            </li><br/>
+            <li>
+                <a href="#4.3.1" target="_self" style="font-family: 'verdana', Times, serif; font-size: 20px; color: black;"> 4.3.1 Redes de interconexión dinámica (indirecta). Medio compartido. Conmutadas</a>
+            </li><br/>
+            <li>
+                <a href="#4.4" target="_self" style="font-family: 'verdana', Times, serif; font-size: 20px; color: black;"> 4.4 Sistemas de memoria distribuida</a>
+            </li><br/>
+            <li>
+                <a href="#4.4.1" target="_self" style="font-family: 'verdana', Times, serif; font-size: 20px; color: black;"> 4.4.1 Redes de interconexión estáticas</a>
+            </li><br/>
+            <li>
+                <a href="#4.5" target="_self" style="font-family: 'verdana', Times, serif; font-size: 20px; color: black;"> 4.5 Casos para estudio</a>
+            </li><br/>
+			<br><br><br><br><br><br><br><br>
+			<li>
+                <a href="index.html" target="_self" style="font-family: 'verdana', Times, serif; font-size: 20px; color: black;" >INICIO</a>
+            </li><br />			
+        </div>
+    </a>
+    
+    <a name="4.1">
+        
+        <h1 style="font-family: 'Forte', Times, serif; font-size: 30px; color: yellow; text-align: right; border-style:groove;text-shadow: 3px 3px black;">
+            4.1 Aspectos básicos de la computación paralela
+        </h1>
+        
+    
+        <p  id="p" style="font-family: 'Verdana', Times, serif; font-size: 15px; color: black; text-align: left;">
+		 La computación paralela es una forma de cómputo en la que muchas instrucciones 
+		se ejecutan simultáneamente, operando sobre el principio de que problemas 
+		grandes, a menudo se pueden dividir en unos más pequeños, que luego son 
+		resueltos simultáneamente (en paralelo). Hay varias formas diferentes de 
+		computación paralela: paralelismo a nivel de bit, paralelismo a nivel de instrucción, 
+		paralelismo de datos y paralelismo de tareas. 
+			<br>
+			<br>
+			
+		El paralelismo se ha empleado 
+		durante muchos años, sobre todo en la computación de altas prestaciones, pero el 
+		interés en ella ha crecido últimamente debido a las limitaciones físicas que impiden 
+		el aumento de la frecuencia. Como el consumo de energía —y por consiguiente la 
+		generación de calor— de las computadoras constituye una preocupación en los 
+		últimos años, la computación en paralelo se ha convertido en el paradigma 
+		dominante en la arquitectura de computadores, principalmente en forma de 
+		procesadores multinúcleo.
+            <br>
+            <br>
+		Las computadoras paralelas pueden clasificarse según el nivel de paralelismo que 
+		admite su hardware: equipos con procesadores multinúcleo y multi-procesador que 
+		tienen múltiples elementos de procesamiento dentro de una sola máquina y los 
+		clústeres, MPPS y grids que utilizan varios equipos para trabajar en la misma tarea. 
+		Muchas veces, para acelerar la tareas específicas, se utilizan arquitecturas 
+		especializadas de computación en paralelo junto a procesadores tradicionales.
+            <br>
+            <br>
+		Los programas informáticos paralelos son más difíciles de escribir que los 
+		secuenciales, porque la concurrencia introduce nuevos tipos de errores de software, 
+		siendo las condiciones de carrera los más comunes. La comunicación y 
+		sincronización entre diferentes subtareas son algunos de los mayores obstáculos 
+		para obtener un buen rendimiento del programa paralelo.
+            <br>
+            <br>
+        La máxima aceleración posible de un programa como resultado de la paralelización 
+		se conoce como la ley de Amdahl.
+
+        </p>
+    </a>
+    
+    <br/>
+    <br/>
+    
+    <a name="4.2">
+        
+        <h1 style="font-family: 'Forte', Times, serif; font-size: 30px; color: yellow; text-align: right; border-style:groove;text-shadow: 3px 3px black;">
+            4.2 Tipos de compútación paralela
+        </h1>
+        
+    
+        <p  id="p" style="font-family: 'Verdana', Times, serif; font-size: 15px; color: black; text-align: left;">
+            Hay varios tipos diferentes de computación paralela: paralelismo a nivel de bit, paralelismo a nivel de instrucción, paralelismo de datos y paralelismo de tareas. El paralelismo se ha empleado durante muchos años, sobre todo en la computación de altas prestaciones, pero el interés en ella ha crecido últimamente debido a las limitaciones físicas que impiden el aumento de la frecuencia. Como el consumo de energía —y por consiguiente la generación de calor— de las computadoras constituye una preocupación en los últimos años, la computación en paralelo se ha convertido en el paradigma dominante en la arquitectura de computadores, principalmente en forma de procesadores multinúcleo.
+            <br>
+            <br>
+            Paralelismo a nivel bit::
+            <br>
+			Desde el advenimiento de la integración a gran escala (VLSI) como tecnología de fabricación de chips de computadora en la década de 1970 hasta alrededor de 1986, la aceleración en la arquitectura de computadores se lograba en gran medida duplicando el tamaño de la palabra en la computadora, la cantidad de información que el procesador puede manejar por ciclo. El aumento del tamaño de la palabra reduce el número de instrucciones que el procesador debe ejecutar para realizar una operación en variables cuyos tamaños son mayores que la longitud de la palabra. Por ejemplo, cuando un procesador de 8 bits debe sumar dos enteros de 16 bits, el procesador primero debe adicionar los 8 bits de orden inferior de cada número entero con la instrucción de adición, a continuación, añadir los 8 bits de orden superior utilizando la instrucción de adición con acarreo que tiene en cuenta el bit de acarreo de la adición de orden inferior, en este caso un procesador de 8 bits requiere dos instrucciones para completar una sola operación, en donde un procesador de 16 bits necesita una sola instrucción para poder completarla.
+            <br>
+            <br>
+            Paralelismo a nivel instrucción:
+            <br>
+			Un programa de ordenador es, en esencia, una secuencia de instrucciones ejecutadas por un procesador. Estas instrucciones pueden reordenarse y combinarse en grupos que luego son ejecutadas en paralelo sin cambiar el resultado del programa. Esto se conoce como paralelismo a nivel de instrucción. Los avances en el paralelismo a nivel de instrucción dominaron la arquitectura de computadores desde mediados de 1980 hasta mediados de la década de 1990.
+            <br>			
+            <br>
+			Los procesadores modernos tienen ”pipeline” de instrucciones de varias etapas. Cada etapa en el pipeline corresponde a una acción diferente que el procesador realiza en la instrucción correspondiente a la etapa; un procesador con un pipeline de N etapas puede tener hasta n instrucciones diferentes en diferentes etapas de finalización. El ejemplo canónico de un procesador segmentado es un procesador RISC, con cinco etapas: pedir instrucción, decodificar, ejecutar, acceso a la memoria y escritura. El procesador Pentium 4tenía un pipeline de 35 etapas.
+            <br>			
+            <br>
+            Además del paralelismo a nivel de instrucción del pipelining, algunos procesadores pueden ejecutar más de una instrucción a la vez. Estos son conocidos como procesadores superes calares. Las instrucciones pueden agruparse juntas sólo si no hay dependencia de datos entre ellas. El scoreboarding y el algoritmo de Tomasulo (que es similar a scoreboarding pero hace uso del ) son dos de las técnicas más comunes para implementar la ejecución fuera de orden y la paralelización a nivel de instrucción.
+			<br>
+			<br>
+			Paralelismo de datos:
+            <br>
+			El paralelismo de datos es el paralelismo inherente en programas con ciclos, que se centra en la distribución de los datos entre los diferentes nodos computacionales que deben tratarse en paralelo. La paralelización de ciclos conduce a menudo a secuencias similares de operaciones (no necesariamente idénticas) o funciones que se realizan en los elementos de una gran estructura de datos. Muchas de las aplicaciones científicas y de ingeniería muestran paralelismo de datos.
+			<br>
+			<br>
+			Paralelismo de tareas:
+            <br>
+			El paralelismo de tareas es la característica de un programa paralelo en la que cálculos completamente diferentes se pueden realizar en cualquier conjunto igual o diferente de datos. Esto contrasta con el paralelismo de datos, donde se realiza el mismo cálculo en distintos o mismos grupos de datos. El paralelismo de tareas por lo general no escala con el tamaño de un problema.
+			<br>
+			<br>
+			<img src="Imagenes3/paralelo.png"
+            width="400"
+            height="200"
+            class="center">
+            
+            <br>
+            <br>		
+        </p>
+    </a>
+    
+    <br/>
+    <br/>
+    
+    <a name="4.2.1">
+        
+        <h1 style="font-family: 'Forte', Times, serif; font-size: 30px; color: yellow; text-align: right; border-style:groove;text-shadow: 3px 3px black;">
+            4.2.1 Clasificación
+        </h1>
+        
+    
+        <p  id="p" style="font-family: 'Verdana', Times, serif; font-size: 15px; color: black; text-align: left;">
+            Taxonomía de las Computadoras:
+            <br>
+			Las diferentes posibilidades existentes para desarrollar sistemas paralelos hacen 
+			que una clasificación definitiva sea complicada. Se muestra una clasificación clásica 
+			propuesta por Flynn, que se basa en el ciclo de instrucciones y en el flujo de dato.
+            <br>
+            <br>
+            Taxonomía de FLYNN:
+            <br>
+			En 1966 Flynn propuso una clasificación generalista de las computadoras 
+			adoptando como criterio el flujo de instrucciones y el flujo de datos que en ellos se 
+			desarrolla. La clasificación de Flynn es la siguiente:
+            <br>
+            <br>
+			SISD: Instrucción única, datos únicos. Las instrucciones se ejecutan 
+			secuencialmente pero pueden estar solapadas en las etapas de ejecución.
+            <br>
+			<br>
+			<img src="Imagenes3/6.png"
+            width="400"
+            height="200"
+            class="center">		
+            <br>
+            <br>
+			SIMD: Instrucción única, datos múltiples. Son los procesadores matriciales en los 
+			que existen varias unidades de procesamiento trabajando sobre flujos de datos 
+			distintos pero ejecutando la misma instrucción.
+            <br>
+			<br>	
+			<img src="Imagenes3/7.png"
+            width="400"
+            height="200"
+            class="center">		
+            <br>
+            <br>			
+			MISD: Instrucción múltiple, datos únicos. Este se caracteriza por la existencia de 
+			varias unidades de procesamiento cada una ejecutando una instrucción diferente 
+			pero sobre el mismo flujo de datos.	
+            <br>
+			<br>	
+			<img src="Imagenes3/8.png"
+            width="400"
+            height="200"
+            class="center">		
+            <br>
+            <br>
+			MIMD: es una técnica empleada para lograr paralelismo. Las máquinas que usan 
+			MIMD tienen un número de procesadores que funcionan de manera asíncrona e 
+			independiente.	
+            <br>
+			<br>	
+			<img src="Imagenes3/9.png"
+            width="400"
+            height="200"
+            class="center">		
+        </p>
+    </a>
+    
+    <br/>
+    <br/>
+    
+    <a name="4.2.2">
+        
+        <h1 style="font-family: 'Forte', Times, serif; font-size: 30px; color: yellow; text-align: right; border-style:groove;text-shadow: 3px 3px black;">
+            4.2.2 Arquitectura de computadoras secuenciales
+        </h1>
+        
+    
+        <p  id="p" style="font-family: 'Verdana', Times, serif; font-size: 15px; color: black; text-align: left;">
+            A diferencia de los sistemas combinacionales, en los sistemas secuenciales, los 
+			valores de las salidas, en un momento dado, no dependen exclusivamente de los valores de las entradas en dicho momento, sino también de los valores anteriores. 
+			El sistema secuencial más simple es el biestable.
+            <br>
+            <br>
+            A diferencia de los sistemas combinacionales, en los sistemas secuenciales, los 
+			valores de las salidas, en un momento dado, no dependen exclusivamente de los valores de las entradas en dicho momento, sino también de los valores anteriores. 
+			El sistema secuencial más simple es el biestable.
+            <br>
+            <br>
+            Los principales sistemas secuenciales que pueden 
+			encontrarse en forma de circuito integrado o como estructuras en sistemas 
+			programados son:
+            <br>
+            <br>
+            -Contador.
+            <br>
+            -Registros.
+			<br>
+			<br>
+			<img src="Imagenes3/11.jpg"
+            width="400"
+            height="200"
+            class="center">				
+        </p>
+    </a>
+    
+    <br/>
+    <br/>
+    
+    <a name="4.2.3">
+        
+        <h1 style="font-family: 'Forte', Times, serif; font-size: 30px; color: yellow; text-align: right; border-style:groove;text-shadow: 3px 3px black;">
+            4.2.3 Organización de direcciones de memoria
+        </h1>
+        
+    
+        <p  id="p" style="font-family: 'Verdana', Times, serif; font-size: 15px; color: black; text-align: left;">
+            Organización Logica:
+            <br>
+			Los programas a menudo están organizados en módulos, algunos de los cuales 
+			pueden ser compartidos por diferentes programas, algunos son de sólo-lectura y 
+			otros contienen datos que se pueden modificar. La gestión de memoria es 
+			responsable de manejar esta organización lógica, que se contrapone al espacio de direcciones físicas lineales. Una forma de lograrlo es mediante la segmentación de
+			memoria.
+            <br>
+            <br>
+            -Organización Fisica:
+            <br>
+            La memoria suele dividirse en un almacenamiento primario de alta velocidad y uno 
+			secundario de menor velocidad. La gestión de memoria del sistema operativo se 
+			ocupa de trasladar la información entre estos dos niveles de memoria.
+            <br>
+            <br>
+			<img src="Imagenes3/12.png"
+            width="400"
+            height="200"
+            class="center">				
+        </p>
+    </a>
+    
+    <br/>
+    <br/>
+    
+    <a name="4.3">
+        
+        <h1 style="font-family: 'Forte', Times, serif; font-size: 30px; color: yellow; text-align: right; border-style:groove;text-shadow: 3px 3px black;">
+            4.3 Sistemas de memoria (compartida)
+        </h1>
+        
+    
+        <p  id="p" style="font-family: 'Verdana', Times, serif; font-size: 15px; color: black; text-align: left;">
+            Cada procesador posee su propia unidad de control ejecuta su propio código 
+			sobre sus propios datos, puede ejecutar cualquier aplicación (no solo programas 
+			vectoriales).
+            <br>
+            <br>
+            Memoria Compartida Centralizada:
+            <br>
+			La memoria compartida por todos los procesadores y accesible desde cualquiera. 
+			Descompuesta en varios módulos para permitir el acceso concurrente de varios 
+			procesadores.
+            <br>
+            Cada procesador debe tener un espacio de direccionamiento suficientemente 
+			amplio como para poder direccionarla completamente.
+            <br>
+			Multiprocesador con un sistema de memoria compartida en el cual el tiempo de 
+			acceso varía dependiendo de la ubicación de la palabra de memoria.
+			<br>
+            <br>
+            La memoria compartida se distribuye físicamente por todos los procesadores 
+			(memorias locales). El conjunto de memorias locales forma el espacio de 
+			direccionamiento global accesible por todos los procesadores. En los 
+			multiprocesadores cada procesador suele tener asociada una cache local y ello 
+			introduce el problema de la coherencia en chache: cualquier modificación local de 
+			una determinada posición de la memoria compartida se realizara primeramente 
+			sobre una chache local y ello puede dar lugar a una visión global incoherente de la 
+			memoria.
+			<br>
+			<br>
+			los elementos que integran un multiprocesador puede estar conectados 
+			entre sí a través de una estructuraJerárquica de buses.los buses digitales son los sistemas de interconexión 
+			fundamentales adoptados en sistemas comerciales desde estaciones de trabajo a 
+			minicomputadores, mainframes y multiprocesadores.
+			<br>
+			<br>
+            <img src="Imagenes3/8.jpg"
+            width="500"
+            height="200"
+            class="center">
+
+        </p>
+    </a>
+    
+    <br/>
+    <br/>
+    
+    <a name="4.3.1">
+        
+        <h1 style="font-family: 'Forte', Times, serif; font-size: 30px; color: yellow; text-align: right; border-style:groove;text-shadow: 3px 3px black;">
+            4.3.1 Redes de interconexión dinámica (indirecta). Medio compartido. Conmutadas
+        </h1>
+        
+    
+        <p  id="p" style="font-family: 'Verdana', Times, serif; font-size: 15px; color: black; text-align: left;">
+            Se llama nodo a cualquiera de los dispositivos que se quiera conectar a la red, tales 
+			como elementos de proceso, módulos de memoria, procesadores de 
+			entrada/salida, etc:
+			<br>
+            <br>
+			-Grado de los nodos.
+            <br>
+            -Diametro de una red.
+            <br>
+			-Ancho de biseccion.
+            <br>
+            -Latencia de una red.
+            <br>
+			-Productividad.
+            <br>
+            -Escalabilidad.
+            <br>
+			-Simetria.
+            <br>
+			-Conectividad.
+			<br>
+			<br>
+			Clasificación De Redes De Interconexion:
+			<br>
+			<br>
+			El criterio más importante para la clasificación de las redes de interconexión se 
+			basa en la rigidez de los enlaces entre los nodos: a este respecto a las redes 
+			pueden clasificarse en estáticas o dinámicas. Una red estática se caracteriza 
+			porque su topología queda establecida de forma definitiva y estable cuando se 
+			instala un sistema; su única posibilidad de modificación es crecer. Por el contrario, 
+			una red dinámica puede variar de topología bien durante el curso de la ejecución o 
+			de los procesos o bien entre la ejecución de los mismos.
+			<br>
+			<br>
+			Por otra parte, las redes pueden ser jerárquicas o no, los son si están formadas 
+			por una serie de niveles, con diferente número de nodos, dentro de cada uno de los cuales existe simetría. La mayoría de las redes jerárquicas suelen ser 
+			estáticas, sin embargo, hay algún tipo de topología dinámica que también puede serlo.
+			<br>
+			<br>
+			Redes De Interconexion Dinamicas:
+			<br>
+			<br>
+			Las redes de interconexión dinámicas son convenientes en los casos en que se 
+			desee una red de propósito general ya que son fácilmente reconfigurables. 
+			También por eso, este tipo de Redes facilitan mucho la escalabilidad. En general, 
+			las redes dinámicas necesitan de elementos de conexión específicos como 
+			pueden ser árbitros de bus, conmutadores, etc. Las principales topologías de 
+			redes dinámicas son las siguientes:
+			<br>
+            <br>
+			-Buses.
+            <br>
+            -Redes de líneas cruzadas o matriz de conmutación (crossbar).
+            <br>
+			-Redes multietapa o MIN (Multistage Interconnection Network).
+            <br>
+            -Redes Omega.
+            <br>
+			-Redes de linea base.
+            <br>
+            -Redes Mariposa.
+            <br>
+			-Redes Delta.
+            <br>
+			-Redes de Closs.
+			<br>
+			-Redes de Benes.
+			<br>
+			<br>
+        </p>
+        
+        <h4 style="font-family: 'Forte', Times, serif; font-size: 30px; color: yellow; text-align: right; border-style:groove;text-shadow: 3px 3px black;">  
+            <b> Medio compartido </b>
+        </h4>
+        
+        <p  id="p" style="font-family: 'Verdana', Times, serif; font-size: 15px; color: black; text-align: left;">
+            Entorno de medios compartidos:
+            <br>
+            Ocurre cuando varios host tiene acceso al mismo medio. Por ejemplo, si varios PC 
+			se encuentran conectados al mismo cable físico, a la misma fibra óptica entonces 
+			se dice que comparten el mismo entorno de medios.
+            <br>
+            <br>
+            Entorno extendido de medios compartidos:
+            <br>
+			Es un tipo especial de entorno de medios compartidos en el que los dispositivos 
+			de networking pueden ampliar el entorno de modo que pueda incluir accesos 
+			múltiples o distancias mayores de cableado.
+            <br>
+            La conexión física entre el ordenador y la red se establece siempre a través de un 
+			puerto. Un conector permite enlazar el medio de transmisión con la circuitería de 
+			acceso a la red. Para cada sistema de cableado se emplea un puerto distinto y 
+			algunas veces un dispositivo accesorio.
+            <br>
+            <br>
+            Los tres principales medios de transmisión utilizados en las redes locales son:
+            <br>
+            <br>
+			-Par Trenzado.
+            <br>
+            -Cable Coaxial.
+            <br>
+			-Fibra Optica.
+			<br>
+			<br>
+        </p>
+        
+        <h4 style="font-family: 'Forte', Times, serif; font-size: 30px; color: yellow; text-align: right; border-style:groove;text-shadow: 3px 3px black;">  
+            <b> Conmutadas </b>
+        </h4>
+        
+        <p  id="p" style="font-family: 'Verdana', Times, serif; font-size: 15px; color: black; text-align: left;">
+            Consiste en un conjunto de nodos interconectados entre si, a través de medios de 
+			transmisión, formando la mayoría de las veces una topología mallada, donde la 
+			información se transfiere encaminándola del nodo de origen al nodo destino 
+			mediante conmutación entre nodos intermedios. Una transmisión de este tipo tiene 
+			3 fases:
+            <br>
+            <br>
+            -Establecimiento de la conexión.
+            <br>
+            -Transferencia de la información.
+            <br>
+            -Liberación de la conexión.
+            <br>
+            <br>
+            La conmutación en un nodo a la conexión física o lógica de un camino de entrada 
+			al nodo con un camino de salida del nodo con el fin de transferir la información que 
+			llegue por el primer camino al segundo.la redes conmutadas son las redes de área 
+			extensa. Las redes conmutadas se dividen en:
+            <br>
+            <br>
+            -Conmutacion de paquetes.
+            <br>
+            -Conmutacion de circuitos.
+            <br>
+            <br>
+			La conmutación de paquetes:
+            <br>
+			Es un método de envío de datos en una red de computadoras. Un paquete es un 
+			grupo de información que consta de dos partes: los datos propiamente dichos y la 
+			información de control, que indica la ruta a seguir a lo largo de la red hasta el 
+			destino del paquete. Existe un límite superior para el tamaño de los paquetes; si 
+			se excede, es necesario dividir el paquete en otros más pequeños.
+            <br>
+            <br>
+			La conmutación de circuitos:
+            <br>
+			Es un tipo de conexión que realizan los diferentes nodos de una red para lograr un 
+			camino apropiado para conectar dos usuarios de una red de telecomunicaciones. 
+			A diferencia de lo que ocurre en la conmutación de paquetes, en este tipo de 
+			conmutación se establece un canal de comunicaciones dedicado entre dos estaciones. Se reservan recursos de transmisión y de conmutación de la red para 
+			su uso exclusivo en el circuito durante la conexión. Ésta es transparente: una vez 
+			establecida parece como si los dispositivos estuvieran realmente conectados.		
+        </p>
+    </a>
+    
+    <br/>
+    <br/>
+    
+    <a name="4.4">
+        
+        <h1 style="font-family: 'Forte', Times, serif; font-size: 30px; color: yellow; text-align: right; border-style:groove;text-shadow: 3px 3px black;">
+            4.4 Sistemas de memoria distribuida
+        </h1>
+        
+    
+        <p  id="p" style="font-family: 'Verdana', Times, serif; font-size: 15px; color: black; text-align: left;">
+            Los sistemas de memoria distribuida o multicomputadores pueden ser de dos tipos básicos. El primer de ellos consta de un único computador con múltiples CPUs comunicadas por un bus de datos mientras que en el segundo se utilizan múltiples computadores, cada uno con su propio procesador, enlazados por una red de interconexión más o menos rápida.
+            <br>
+            <br>
+            Sobre los sistemas de multicomputadores de memoria distribuida, se simula memorias compartidas. Se usan los mecanismos de comunicación y sincronización de sistemas multiprocesadores.
+            <br>
+            <br>
+            Un clúster es un tipo de arquitectura paralela distribuida que consiste de un conjunto de computadores independientes interconectados operando de forma conjunta como único recurso computacional sin embargo, cada computador puede utilizarse de forma independiente o separada.
+            <br>
+            <br>
+            Sin embargo, cada computador puede utilizarse de forma independiente o 
+			separada.
+            <br>
+            <br>
+			<img src="Imagenes3/13.jpg"
+            width="500"
+            height="200"
+            class="center">
+        </p>
+    </a>
+    
+    <br/>
+    <br/>
+    
+    <a name="4.4.1">
+        
+        <h1 style="font-family: 'Forte', Times, serif; font-size: 30px; color: yellow; text-align: right; border-style:groove;text-shadow: 3px 3px black;">
+            4.4.1 Redes de interconexión estáticas
+        </h1>
+        
+    
+        <p  id="p" style="font-family: 'Verdana', Times, serif; font-size: 15px; color: black; text-align: left;">
+            Las redes estáticas emplean enlaces directos fijos entre los nodos. Estos enlaces, una vez fabricado el sistema son difíciles de cambiar, por lo que la escalabilidad de estas topologías es baja. Las redes estáticas pueden utilizarse con eficiencia en los sistemas en que pueden predecirse el tipo de tráfico de comunicaciones entre sus procesadores.
+            <br>
+            <br>
+            Clases de redes de interconexión:
+            <br>
+            <br>
+            -Formación lineal: Se trata de una red unidimensional en que los nodos se conectan cada uno con el siguiente medianteN-1 enlaces formando una línea.
+            <br>
+			<br>
+            -Mallas y toros: Esta red de interconexión es muy utilizada en la práctica. Las redes en toro son mallas en que sus filas y columnas tienen conexiones en anillo, esto contribuye a disminuir su diámetro. Esta pequeña modificación permite convertir a las mallas en estructuras simétricas y además reduce su diámetro a la mitad.
+            <br>
+            <br>
+			<img src="Imagenes3/14.png"
+            width="400"
+            height="300"
+            class="center">			
+        </p>
+    </a>
+    
+    <br/>
+    <br/>
+    
+    <a name="4.5">
+        
+        <h1 style="font-family: 'Forte', Times, serif; font-size: 30px; color: yellow; text-align: right; border-style:groove;text-shadow: 3px 3px black;">
+            4.5 Casos para estudio
+        </h1>
+        
+    
+        <p  id="p" style="font-family: 'Verdana', Times, serif; font-size: 15px; color: black; text-align: left;">
+            Por numerosos motivos, el procesamiento distribuido se ha convertido en un área de gran importancia e interés dentro de la Ciencia de la Computación, produciendo profundas transformaciones en las líneas de I/D.
+            <br>
+            <br>
+            Interesa realizar investigación en la especificación, transformación, optimización y evaluación de algoritmos distribuidos y paralelos. Esto incluye el diseño y desarrollo de sistemas paralelos, la transformación de algoritmos secuenciales en paralelos, y las métricas de evaluación de performance sobre distintas plataformas de soporte (hardware y software). Más allá de las mejoras constantes en las arquitecturas físicas de soporte, uno de los mayores desafíos se centra en cómo aprovechar al máximo la potencia de las mismas.
+            <br>
+            <br>
+        </p>
+       <div class="div-unidades">
+			<li>
+                <a href="index.html" target="_self"  style="font-family: 'verdana', Times, serif; font-size: 20px; color: black;" > INICIO</a>
+            </li><br />
+        </div>
+</body>
+</html>
