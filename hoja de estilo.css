@@ -7,7 +7,7 @@ body{
   font-weight: 100;
   margin:0;
   padding: 0;
-  background-image: url("Imagenes/fondo.jpg");
+  background-image: url("imagenes/fondo.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -22,7 +22,7 @@ body.Fondo1{
   font-weight: 100;
   margin:0;
   padding: 0;
-  background-image: url("Imagenes/Fondo 2.jpg");
+  background-image: url("imagenes/Fondo 2.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -37,7 +37,7 @@ body.Fondo2{
   font-weight: 100;
   margin:0;
   padding: 0;
-  background-image: url("Imagenes/Fondo 3.jpg");
+  background-image: url("imagenes/Fondo 3.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -52,7 +52,7 @@ body.Fondo3{
   font-weight: 100;
   margin:0;
   padding: 0;
-  background-image: url("Imagenes/Fondo 4.jpg");
+  background-image: url("imagenes/Fondo 4.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -67,7 +67,7 @@ body.Fondo4{
   font-weight: 100;
   margin:0;
   padding: 0;
-  background-image: url("Imagenes/Fondo 5.jpg");
+  background-image: url("imagenes/Fondo 5.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover;
